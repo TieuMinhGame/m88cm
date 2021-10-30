@@ -30,7 +30,7 @@ require('mongoose-long')(mongoose); // INT 64bit
 
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
-mongoose.connect("mongodb+srv://admin:@123456@cluster0.9h5fe.mongodb.net/server?retryWrites=true&w=majority",configDB.url, configDB.options)
+mongoose.connect(configDB.url, configDB.options)
     .catch(function(error) {
         if (error)
             console.log('Connect to MongoDB failed', error);
